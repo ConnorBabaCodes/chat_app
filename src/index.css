@@ -1,5 +1,6 @@
 body {
-  background-color: #282c34;
+  background-color: #494f56;
+  font-family: sans-serif;
 }
 
 .App {
@@ -141,7 +142,7 @@ p {
   background: #0b93f6;
   align-self: flex-end;
 }
-.received p {
+p {
   background: #e5e5ea;
   color: black;
 }
@@ -151,4 +152,18 @@ img {
   height: 40px;
   border-radius: 50%;
   margin: 2px 5px;
+}
+
+.welcomeText {
+  color: white;
+}
+
+.guest {
+  margin-top: 2%;
+}
+
+button:hover {
+  color: #494f56;
+  background-color: #6ce5e8;
+  transition: .5s;
 }

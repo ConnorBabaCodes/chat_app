@@ -8,6 +8,7 @@ import 'firebase/compat/auth';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import {useCollectionData} from 'react-firebase-hooks/firestore';
+import {getAuth, signInAnonymously} from 'firebase/auth';
 
 
 
@@ -54,8 +55,23 @@ function SignIn() {
     auth.signInWithPopup(provider);
   }
 
+  function guestSignIn() {
+signInAnonymously(auth)
+  .then(() => {
+   const provider = new firebase.auth();
+  })
+  }
+
   return (
+    <div>
+      <h1 className="welcomeText">Welcome to React Chat Room</h1>
+      <h2 className="welcomeText">This is a single room chatroom app built in React with a firebase backend.</h2>
     <button onClick={signInWithGoogle}>Sign in with Google</button>
+    <div>
+    <button onClick={guestSignIn} className="guest">Continue as guest</button>
+    </div>
+    
+    </div>
   )
   
 }
@@ -116,7 +132,7 @@ function ChatMessage(props) {
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'recieved'
   return (
   <div className={`message ${messageClass}`}>
-    <img src={photoURL} />
+    <img src={photoURL ? photoURL : 'src/assets/logo.png'} />
     <p>{text}</p>
   </div>
   )
