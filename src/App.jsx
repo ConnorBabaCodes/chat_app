@@ -52,7 +52,7 @@ function SignIn() {
 
   function signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithRedirect(provider);
+    auth.signInWithPopup(provider);
   }
 
   function guestSignIn() {
