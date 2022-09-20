@@ -66,10 +66,7 @@ form {
   font-size: 1.5rem;
 }
 
-form button {
-  width: 20%;
-  background-color: rgb(56, 56, 143);
-}
+
 
 
 input {
@@ -93,6 +90,12 @@ button {
   display: inline-block;
   cursor: pointer;
   font-size: 1.25rem;
+}
+
+form button {
+  width: 20%;
+  background-color: rgb(56, 56, 143);
+  padding: 0px;
 }
 
 button:disabled {
@@ -130,6 +133,7 @@ p {
 .message {
   display: flex;
   align-items: center;
+  
 }
 
 
@@ -166,4 +170,16 @@ button:hover {
   color: #494f56;
   background-color: #6ce5e8;
   transition: .5s;
+}
+
+@media (max-width: 768px) {
+
+  .App section{
+    width: 100%;
+  }
+  form {
+    padding-bottom: 1%;
+    
+  }
+
 }
