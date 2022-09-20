@@ -120,9 +120,9 @@ function ChatRoom() {
       <form onSubmit={sendMessage}>
 
       <input required value={formValue} onChange={(e) => setFormValue(e.target.value)}/>
-    <button type="submit">Send</button>
+    <button type="submit"><h1>✉️</h1></button>
       </form>
-    
+
     </>
   )
 }
